@@ -21,7 +21,23 @@ abstract class Employee{
         return "Employee [name = "+name+" , id= "+ id+", Salary = "+CalculateEmployeeSalary()+" ]";
     }
 }
+
+class fullTimeEmployee extends Employee{
+    private double monthlySalary;
+
+    public fullTimeEmployee(String name, int id, double monthlySalary) {
+        super(name, id);
+        this.monthlySalary = monthlySalary;
+    }
+
+    @Override
+    public double CalculateEmployeeSalary() {
+        return monthlySalary;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Working");
     }
 }
