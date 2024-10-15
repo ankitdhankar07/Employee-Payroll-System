@@ -36,6 +36,22 @@ class fullTimeEmployee extends Employee{
     }
 }
 
+class partTimeEmployee extends Employee{
+    private int hoursWorked;
+    private double hourlyRate;
+
+    public partTimeEmployee(String name, int id, double hourlyRate, int hoursWorked) {
+        super(name, id);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
+
+    @Override
+    public double CalculateEmployeeSalary() {
+        return hoursWorked*hourlyRate;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Working");
